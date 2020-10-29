@@ -3,9 +3,10 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-import App from "../assets/views/App";
-import Home from "../assets/views/Home"
-import About from "../assets/views/About"
+import App from "../assets/views/App.vue";
+import Home from "../assets/views/Home.vue"
+import About from "../assets/views/About.vue"
+import UsersIndex from "../assets/views/UsersIndex.vue"
 
 const router = new VueRouter({
     mode: 'history',
@@ -20,6 +21,11 @@ const router = new VueRouter({
             name: 'about',
             component: About,
         },
+        {
+            path: '/users',
+            name: 'users.index',
+            component: UsersIndex,
+        }
     ],
 });
 
